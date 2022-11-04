@@ -1,4 +1,31 @@
 /* <style> */
+
+.center-up {
+    margin-top: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    margin-bottom: 30px;
+
+}
+
+.monthdropdown {
+    width: 140px;
+    height: 40px;
+    font-size: medium;
+    margin-left: 40px;
+    padding: 10px, 25px;
+
+}
+
+.yeardropdown {
+    width: 140px;
+    height: 40px;
+    font-size: medium;
+    margin-left: 60px;
+
+}
+
 * {
     box-sizing: border-box;
 }
@@ -110,31 +137,7 @@ body {
 
 }
 
-.center-up {
-    margin-top: 30px;
-    justify-content: space-evenly;
-    align-items: center;
-    display: flex;
-    margin-bottom: 30px;
 
-}
-
-.monthdropdown {
-    width: 140px;
-    height: 40px;
-    font-size: medium;
-    margin-left: 40px;
-    padding: 10px, 25px;
-
-}
-
-.yeardropdown {
-    width: 140px;
-    height: 40px;
-    font-size: medium;
-    margin-left: 60px;
-
-}
 
 .options {
     padding-left: 60px;
@@ -180,8 +183,6 @@ input {
 
 }
 
-.picker {
-    font-size: 15px;
-}
+
 
 /* </style> */
