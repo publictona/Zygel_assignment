@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date Picker</title>
+    <title>set_Date</title>
     <link rel="stylesheet" href="style.css" href="jquery-ui.min.css" />
     <script src="jquery-3.6.0.min.js"></script>
     <script src="jquery-ui.min.js"></script>
 </head>
 
 <body onload="renderDate()">
-    <div align="center"><table >
-        <tr> 
+    <div class="center-up"><table >
+        <tr > 
          <!-- For months dropdown list-->
-             <td> <select name="month"> <option>January</option>
+             <td > <select class="monthdropdown" name="month"> <option>January</option>
                  <option>February</option>
                  <option>March</option>
                  <option>April</option>
@@ -29,7 +29,7 @@
                  <option>December</option></select>
              </td>
              <!--select year dropdown list-->
-             <td> <select name="year"> <option>2021</option>
+             <td> <select class="yeardropdown" name="year"> <option class="options">2021</option>
                  <option>2022</option>
                  <option>2023</option>
                  <option>2024</option>
@@ -81,10 +81,11 @@
 
     </div>
 
-    <div align="center">
+    <div class="center">
         
-        <input type="text" id="datepicker" placeholder="Select Any Date" />
-            <input type="button" value="Submit" onclick="getDate()" />
+        <input type="text" id="picker" placeholder="Select Any Date" />
+        <button  onclick="getDate()"> ENTER </button>
+           
         
         </div>
 
