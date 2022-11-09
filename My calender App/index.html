@@ -7,12 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>set_Date</title>
     <link rel="stylesheet" href="style.css" href="jquery-ui.min.css" />
-    <script src="jquery-3.6.0.min.js"></script>
-    <script src="jquery-ui.min.js"></script>
+    <!-- <script src="script.js" defer></script> -->
 </head>
 
 <body onload="renderDate()">
-    <div class="center-up"><table >
+    <div class="calendar-header">
+        <span class="month-picker" id="month-picker"></span>
+        <div class="year-picker" id="year-picker">
+          <span class="year-change" id="pre-year">
+            <pre></pre>
+          </span>
+          <span id="year"> </span>
+          <span class="year-change" id="next-year">
+            <pre>></pre>
+          </span>
+        </div>
+      </div>
+
+
+
+
+    <div class="center-up"  >
+        
+        <table >
+       
         <tr > 
          <!-- For months dropdown list-->
              <td > <select class="monthdropdown" name="month"> <option>January</option>
@@ -29,7 +47,7 @@
                  <option>December</option></select>
              </td>
              <!--select year dropdown list-->
-             <td> <select class="yeardropdown" name="year"> <option class="options">2021</option>
+             <td> <select class="yeardropdown" name="year"> <option class="options" >2021</option>
                  <option>2022</option>
                  <option>2023</option>
                  <option>2024</option>
@@ -45,6 +63,7 @@
         </tr>
  
      </table>
+     
     </div>
     
 
@@ -84,7 +103,7 @@
     <div class="center">
         
         <input type="text" id="picker" placeholder="Select Any Date" />
-        <button  onclick="getDate()"> ENTER </button>
+        <button  onclick=formatDate()> ENTER </button>
            
         
         </div>
@@ -157,6 +176,24 @@
             }
             renderDate();
         }
+
+
+
+        function formatDate (d) {
+	let day = d.getDay();
+	if (day < 10) {
+		day = '0' + day;
+	}
+
+	let month = d.getMonth() + 1;
+	if (month < 10) {
+		month = '0' + month;
+	}
+
+	let year = d.getFullYear();
+
+	return day + ' / ' + month + ' / ' + year;
+}
     </script>
 
 
