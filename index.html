@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set_Date</title>
+    <link rel="stylesheet" href="style.css" href="jquery-ui.min.css" />
+    
+
+</head>
+
+
+<body onload="renderDate()">
+    <div class="calendar-header">
+        <span class="month-picker" id="month-picker"></span>
+        <div class="year-picker" id="year-picker">
+          <span class="year-change" id="pre-year">
+            <pre></pre>
+          </span>
+          <span id="year"> </span>
+          <span class="year-change" id="next-year">
+            <pre>></pre>
+          </span>
+        </div>
+      </div>
+
+<div class="center-up"  ><table >
+       <tr > 
+         <!-- For months dropdown list-->
+             <td > <select class="monthdropdown" name="month"> <option>January</option>
+                 <option>February</option>
+                 <option>March</option>
+                 <option>April</option>
+                 <option>May</option>
+                 <option>June</option>
+                 <option>July</option>
+                 <option>August</option>
+                 <option>September</option>
+                 <option>October</option>
+                 <option>November</option>
+                 <option>December</option></select>
+             </td>
+             <!--select year dropdown list-->
+             <td> <select class="yeardropdown" name="year"> <option class="options" >2021</option>
+                 <option>2022</option>
+                 <option>2023</option>
+                 <option>2024</option>
+                 <option>2025</option>
+                 <option>2026</option>
+                 <option>2027</option>
+                 <option>2028</option>
+                 <option>2029</option>
+                 <option>2030</option>
+                 <option>2031</option>
+                 <option>2032</option>Select Year</select>
+             
+        </tr>
+ 
+     </table>
+     
+    </div>
+    
+
+    <div class="wrapper">
+        <div class="calendar">
+            <div class="month">
+                <div class="prev" onclick="moveDate('prev')">
+                    <span>&#10094;</span>
+                </div>
+                <div>
+                    <h2 id="month"></h2>
+                    <p id="date"></p>
+                </div>
+                <div class="next" onclick="moveDate('next')">
+                    <span>&#10095;</span>
+                </div>
+            </div>
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="days">
+
+            </div>
+        </div>
+    
+         
+   
+
+    </div>
+
+    <div class="center">
+        
+        <input type="text" id="date_str" placeholder="Select Any Date" />
+        <button  > ENTER </button>
+           
+        
+        </div>
+
+    
+
+        <script src="script.js" ></script>
+</body>
+
+
+</html>
